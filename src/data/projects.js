@@ -4,7 +4,7 @@ export const projects = [
     description: "A powerful client-side image resizer and converter built with modern web technologies.",
     tech: ["React", "WebAssembly", "TailwindCSS"],
     liveUrl: "https://imagitor-delta.vercel.app/",
-    githubUrl: "https://github.com/tanbiralam/imagitor",
+    githubUrl: "#",
     image: "/projects/imagitor.png",
   },
   {
@@ -12,7 +12,7 @@ export const projects = [
     description: "A comprehensive React UI component library designed for speed and accessibility.",
     tech: ["React", "TypeScript", "Storybook"],
     liveUrl: "https://reacui.vercel.app/",
-    githubUrl: "https://github.com/tanbiralam/reacui",
+    githubUrl: "#",
     image: "/projects/reacui.png",
   },
   {

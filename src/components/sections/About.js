@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 import Section from "@/components/ui/Section";
 import Button from "@/components/ui/Button";
 import { Download } from "lucide-react";
+import Image from "next/image";
 
 export default function About() {
   return (
@@ -15,17 +16,18 @@ export default function About() {
           viewport={{ once: true }}
           transition={{ duration: 0.8, ease: "easeOut" }}
         >
-          <div className="relative aspect-square max-w-md mx-auto md:mx-0 bg-slate-200 dark:bg-slate-800 rounded-2xl overflow-hidden shadow-xl group">
-            {/* Placeholder for Image */}
-            <div className="absolute inset-0 flex items-center justify-center text-slate-400 font-medium z-10">
-              Profile Image
+          <div className="relative aspect-square max-w-md mx-auto md:mx-0 bg-slate-200 dark:bg-slate-800 rounded-full overflow-hidden group">
+            <div className="relative w-full h-full">
+              <Image
+                src="/projects/tanbir.png"
+                alt="Tanbir's Profile"
+                fill
+                className="object-cover transition-transform duration-500 group-hover:scale-110 drop-shadow-2xl"
+                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                priority
+              />
+              <div className="absolute inset-0 bg-primary/10 mix-blend-overlay z-10 transition-opacity duration-300 group-hover:opacity-0" />
             </div>
-            <motion.div 
-              className="absolute inset-0 bg-primary/10 z-0"
-              initial={{ scale: 1.2 }}
-              whileHover={{ scale: 1 }}
-              transition={{ duration: 0.5 }}
-            />
           </div>
         </motion.div>
 
