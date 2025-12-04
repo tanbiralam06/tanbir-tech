@@ -10,7 +10,7 @@ export const experience = [
     company: "Biomoneta Research India Pvt Ltd",
     role: "IT Consultant",
     period: "June 2025 - Present",
-    description: "",
-    technologies: ["React", "Node.js", "PostgreSQL"],
+    description: "Serving as a consultant for Biomoneta Research Private Limited, providing professional services in computational and information technology, new product development, and management support.",
+    technologies: ["React", "Node.js", "PostgreSQL", "Python", "Git", "Express.js"],
   },
 ];

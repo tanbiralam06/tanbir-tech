@@ -56,10 +56,10 @@ export default function Contact() {
               <Button size="sm" variant="ghost" className="rounded-full w-10 h-10 p-0" href="https://github.com">
                 <Github size={20} />
               </Button>
-              <Button size="sm" variant="ghost" className="rounded-full w-10 h-10 p-0" href="https://linkedin.com">
+              <Button size="sm" variant="ghost" className="rounded-full w-10 h-10 p-0" href="https://www.linkedin.com/in/tanbir06/">
                 <Linkedin size={20} />
               </Button>
-              <Button size="sm" variant="ghost" className="rounded-full w-10 h-10 p-0" href="https://twitter.com">
+              <Button size="sm" variant="ghost" className="rounded-full w-10 h-10 p-0" href="https://x.com/Tanbir_tech">
                 <Twitter size={20} />
               </Button>
             </div>

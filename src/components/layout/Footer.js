@@ -27,7 +27,7 @@ export default function Footer() {
               <Github size={24} />
             </a>
             <a
-              href="https://linkedin.com"
+              href="https://www.linkedin.com/in/tanbir06/"
               target="_blank"
               rel="noopener noreferrer"
               className="text-slate-500 hover:text-primary transition-colors"
@@ -36,7 +36,7 @@ export default function Footer() {
               <Linkedin size={24} />
             </a>
             <a
-              href="https://twitter.com"
+              href="https://x.com/Tanbir_tech"
               target="_blank"
               rel="noopener noreferrer"
               className="text-slate-500 hover:text-primary transition-colors"
@@ -55,7 +55,7 @@ export default function Footer() {
         </div>
 
         <div className="mt-8 pt-8 border-t border-slate-200 dark:border-slate-800 text-center text-sm text-slate-500">
-          <p>&copy; {currentYear} Tanbir Alam. Built with Next.js & TailwindCSS.</p>
+          <p>&copy; {currentYear} Tanbir Alam. Built with ❤️</p>
         </div>
       </Container>
     </footer>
