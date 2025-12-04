@@ -1,11 +1,50 @@
 "use client";
 
+import { useState } from "react";
+
 import { motion } from "framer-motion";
 import Section from "@/components/ui/Section";
 import Button from "@/components/ui/Button";
 import { Mail, Github, Linkedin, Twitter } from "lucide-react";
 
 export default function Contact() {
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    message: "",
+  });
+  const [status, setStatus] = useState("idle"); // idle, loading, success, error
+
+  const handleChange = (e) => {
+    const { id, value } = e.target;
+    setFormData((prev) => ({ ...prev, [id]: value }));
+  };
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    setStatus("loading");
+
+    try {
+      const response = await fetch("/api/contact", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(formData),
+      });
+
+      if (response.ok) {
+        setStatus("success");
+        setFormData({ name: "", email: "", message: "" });
+      } else {
+        setStatus("error");
+      }
+    } catch (error) {
+      console.error("Error submitting form:", error);
+      setStatus("error");
+    }
+  };
+
   return (
     <Section id="contact" className="bg-slate-50 dark:bg-slate-900/50">
       <motion.div
@@ -73,7 +112,7 @@ export default function Contact() {
           transition={{ duration: 0.5, delay: 0.2 }}
           className="bg-white dark:bg-slate-800 p-8 rounded-2xl shadow-lg border border-slate-100 dark:border-slate-700"
         >
-          <form className="flex flex-col gap-6" onSubmit={(e) => e.preventDefault()}>
+          <form className="flex flex-col gap-6" onSubmit={handleSubmit}>
             <div>
               <label htmlFor="name" className="block text-sm font-medium text-slate-700 dark:text-slate-300 mb-2">
                 Name
@@ -81,6 +120,9 @@ export default function Contact() {
               <input
                 type="text"
                 id="name"
+                value={formData.name}
+                onChange={handleChange}
+                required
                 className="w-full px-4 py-3 rounded-lg bg-slate-50 dark:bg-slate-900 border border-slate-200 dark:border-slate-700 focus:outline-none focus:ring-2 focus:ring-primary/50 transition-all"
                 placeholder="Your Name"
               />
@@ -92,6 +134,9 @@ export default function Contact() {
               <input
                 type="email"
                 id="email"
+                value={formData.email}
+                onChange={handleChange}
+                required
                 className="w-full px-4 py-3 rounded-lg bg-slate-50 dark:bg-slate-900 border border-slate-200 dark:border-slate-700 focus:outline-none focus:ring-2 focus:ring-primary/50 transition-all"
                 placeholder="your@email.com"
               />
@@ -103,13 +148,30 @@ export default function Contact() {
               <textarea
                 id="message"
                 rows={4}
+                value={formData.message}
+                onChange={handleChange}
+                required
                 className="w-full px-4 py-3 rounded-lg bg-slate-50 dark:bg-slate-900 border border-slate-200 dark:border-slate-700 focus:outline-none focus:ring-2 focus:ring-primary/50 transition-all resize-none"
                 placeholder="How can I help you?"
               />
             </div>
-            <Button type="submit" className="w-full">
-              Send Message
+            <Button
+              type="submit"
+              className="w-full cursor-pointer disabled:opacity-70 disabled:cursor-not-allowed"
+              disabled={status === "loading"}
+            >
+              {status === "loading" ? "Sending..." : "Send Message"}
             </Button>
+            {status === "success" && (
+              <p className="text-green-600 text-center text-sm">
+                Message sent successfully!
+              </p>
+            )}
+            {status === "error" && (
+              <p className="text-red-600 text-center text-sm">
+                Failed to send message. Please try again.
+              </p>
+            )}
           </form>
         </motion.div>
       </div>
