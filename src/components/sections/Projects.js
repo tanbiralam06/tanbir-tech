@@ -1,13 +1,23 @@
 "use client";
 
+import { useState } from "react";
+
 import { motion } from "framer-motion";
 import Image from "next/image";
 import Section from "@/components/ui/Section";
 import Button from "@/components/ui/Button";
+import Modal from "@/components/ui/Modal";
 import { projects } from "@/data/projects";
 import { Github, ExternalLink } from "lucide-react";
 
 export default function Projects() {
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
+  const handleCodeClick = (e) => {
+    e.preventDefault();
+    setIsModalOpen(true);
+  };
+
   return (
     <Section id="projects" className="bg-slate-50 dark:bg-slate-900/50">
       <motion.div
@@ -72,7 +82,7 @@ export default function Projects() {
                 ))}
               </div>
               <div className="flex gap-4 mt-auto">
-                <Button size="sm" variant="outline" className="flex-1 gap-2" href={project.githubUrl}>
+                <Button size="sm" variant="outline" className="flex-1 gap-2" onClick={handleCodeClick}>
                   <Github size={16} /> Code
                 </Button>
                 <Button size="sm" className="flex-1 gap-2" href={project.liveUrl}>
@@ -83,6 +93,31 @@ export default function Projects() {
           </motion.div>
         ))}
       </div>
+
+
+      <Modal
+        isOpen={isModalOpen}
+        onClose={() => setIsModalOpen(false)}
+        title="Access Restricted"
+      >
+        <div className="text-center space-y-4">
+          <div className="w-12 h-12 bg-red-100 dark:bg-red-900/30 text-red-600 dark:text-red-400 rounded-full flex items-center justify-center mx-auto">
+            <Github size={24} />
+          </div>
+          <p className="text-slate-600 dark:text-slate-300">
+            Permission not granted. This project repository is private or restricted.
+          </p>
+          <div className="flex justify-center pt-2">
+            <Button
+              variant="primary"
+              size="sm"
+              onClick={() => setIsModalOpen(false)}
+            >
+              Close
+            </Button>
+          </div>
+        </div>
+      </Modal>
     </Section>
   );
 }
