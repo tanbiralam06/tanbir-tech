@@ -58,7 +58,8 @@ export default function Contact() {
           Get In Touch
         </h2>
         <p className="text-lg text-slate-600 dark:text-slate-400 max-w-2xl mx-auto">
-          Have a project in mind or just want to say hi? I&apos;d love to hear from you.
+          Have a project in mind or just want to say hi? I&apos;d love to hear
+          from you.
         </p>
       </motion.div>
 
@@ -73,32 +74,55 @@ export default function Contact() {
             Contact Information
           </h3>
           <p className="text-slate-600 dark:text-slate-400 mb-8 leading-relaxed">
-            I&apos;m currently open to freelance opportunities and full-time roles.
-            Feel free to reach out using the form or through my social channels.
+            I&apos;m currently open to freelance opportunities and full-time
+            roles. Feel free to reach out using the form or through my social
+            channels.
           </p>
-          
+
           <div className="flex flex-col gap-6">
-            <a href="mailto:social.tanbir@gmail.com" className="flex items-center gap-4 text-slate-600 dark:text-slate-300 hover:text-primary transition-colors">
+            <a
+              href="mailto:social.tanbir@gmail.com"
+              className="flex items-center gap-4 text-slate-600 dark:text-slate-300 hover:text-primary transition-colors"
+            >
               <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center text-primary">
                 <Mail size={24} />
               </div>
               <div>
-                <p className="text-sm text-slate-500 dark:text-slate-400">Email</p>
+                <p className="text-sm text-slate-500 dark:text-slate-400">
+                  Email
+                </p>
                 <p className="font-medium">social.tanbir@gmail.com</p>
               </div>
             </a>
           </div>
 
           <div className="mt-12">
-            <h4 className="text-sm font-semibold text-slate-900 dark:text-white uppercase tracking-wider mb-4">Follow Me</h4>
+            <h4 className="text-sm font-semibold text-slate-900 dark:text-white uppercase tracking-wider mb-4">
+              Follow Me
+            </h4>
             <div className="flex gap-4">
-              <Button size="sm" variant="ghost" className="rounded-full w-10 h-10 p-0" href="https://github.com">
+              <Button
+                size="sm"
+                variant="ghost"
+                className="rounded-full w-10 h-10 p-0"
+                href="https://github.com/tanbiralam06"
+              >
                 <Github size={20} />
               </Button>
-              <Button size="sm" variant="ghost" className="rounded-full w-10 h-10 p-0" href="https://www.linkedin.com/in/tanbir06/">
+              <Button
+                size="sm"
+                variant="ghost"
+                className="rounded-full w-10 h-10 p-0"
+                href="https://www.linkedin.com/in/tanbir06/"
+              >
                 <Linkedin size={20} />
               </Button>
-              <Button size="sm" variant="ghost" className="rounded-full w-10 h-10 p-0" href="https://x.com/Tanbir_tech">
+              <Button
+                size="sm"
+                variant="ghost"
+                className="rounded-full w-10 h-10 p-0"
+                href="https://x.com/Tanbir_tech"
+              >
                 <Twitter size={20} />
               </Button>
             </div>
@@ -114,7 +138,10 @@ export default function Contact() {
         >
           <form className="flex flex-col gap-6" onSubmit={handleSubmit}>
             <div>
-              <label htmlFor="name" className="block text-sm font-medium text-slate-700 dark:text-slate-300 mb-2">
+              <label
+                htmlFor="name"
+                className="block text-sm font-medium text-slate-700 dark:text-slate-300 mb-2"
+              >
                 Name
               </label>
               <input
@@ -128,7 +155,10 @@ export default function Contact() {
               />
             </div>
             <div>
-              <label htmlFor="email" className="block text-sm font-medium text-slate-700 dark:text-slate-300 mb-2">
+              <label
+                htmlFor="email"
+                className="block text-sm font-medium text-slate-700 dark:text-slate-300 mb-2"
+              >
                 Email
               </label>
               <input
@@ -142,7 +172,10 @@ export default function Contact() {
               />
             </div>
             <div>
-              <label htmlFor="message" className="block text-sm font-medium text-slate-700 dark:text-slate-300 mb-2">
+              <label
+                htmlFor="message"
+                className="block text-sm font-medium text-slate-700 dark:text-slate-300 mb-2"
+              >
                 Message
               </label>
               <textarea
