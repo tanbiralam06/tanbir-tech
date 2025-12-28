@@ -5,7 +5,9 @@
   --background: #ffffff;
   --foreground: #1e293b; /* Slate-800 */
   --primary: #6366f1; /* Indigo-500 */
+  --primary-rgb: 99, 102, 241;
   --secondary: #22d3ee; /* Cyan-400 */
+  --secondary-rgb: 34, 211, 238;
 }
 
 @media (prefers-color-scheme: dark) {

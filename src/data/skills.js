@@ -1,22 +1,48 @@
 export const skills = [
   {
     category: "Frontend",
-    items: ["HTML", "CSS", "JavaScript", "React", "Next.js", "TailwindCSS"],
+    icon: "Layout",
+    items: [
+      { name: "HTML", icon: "FileCode" },
+      { name: "CSS", icon: "Palette" },
+      { name: "JavaScript", icon: "FileJson" },
+      { name: "React", icon: "Atom" },
+      { name: "Next.js", icon: "Zap" },
+      { name: "TailwindCSS", icon: "Wind" },
+    ],
   },
   {
     category: "Backend",
-    items: ["Node.js", "Express.js"],
+    icon: "Server",
+    items: [
+      { name: "Node.js", icon: "Hexagon" },
+      { name: "Express.js", icon: "Activity" },
+    ],
   },
   {
     category: "Database",
-    items: ["MongoDB", "PostgreSQL"],
+    icon: "Database",
+    items: [
+      { name: "MongoDB", icon: "Database" },
+      { name: "PostgreSQL", icon: "Layers" },
+    ],
   },
   {
     category: "Cloud & DevOps",
-    items: ["AWS", "GCP", "Docker"],
+    icon: "Cloud",
+    items: [
+      { name: "AWS", icon: "Cloud" },
+      { name: "GCP", icon: "Globe" },
+      { name: "Docker", icon: "Package" },
+    ],
   },
   {
     category: "Tools",
-    items: ["Git", "VS Code", "Postman"],
+    icon: "Wrench",
+    items: [
+      { name: "Git", icon: "GitBranch" },
+      { name: "VS Code", icon: "AppWindow" },
+      { name: "Postman", icon: "Orbit" },
+    ],
   },
 ];
