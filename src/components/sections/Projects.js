@@ -52,7 +52,7 @@ export default function Projects() {
                   src={project.image}
                   alt={`${project.title} preview`}
                   fill
-                  className="object-cover transition-transform duration-500 group-hover:scale-110"
+                  className="object-contain bg-gray-100 dark:bg-gray-900 transition-transform duration-500 group-hover:scale-105"
                 />
               ) : (
                 <div className="absolute inset-0 flex items-center justify-center text-slate-400 font-medium bg-slate-100 dark:bg-slate-800">
