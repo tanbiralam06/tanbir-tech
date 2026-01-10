@@ -13,10 +13,13 @@ export default function Button({
   ...props
 }) {
   const variants = {
-    primary: "bg-primary text-white hover:opacity-90 shadow-lg shadow-primary/20",
-    secondary: "bg-secondary text-slate-900 hover:opacity-90 shadow-lg shadow-secondary/20",
+    primary:
+      "bg-primary text-white hover:opacity-90 shadow-lg shadow-primary/20",
+    secondary:
+      "bg-secondary text-slate-900 hover:opacity-90 shadow-lg shadow-secondary/20",
     outline: "border-2 border-primary text-primary hover:bg-primary/10",
-    ghost: "hover:bg-slate-100 dark:hover:bg-slate-800 text-slate-600 dark:text-slate-300",
+    ghost:
+      "hover:bg-slate-100 dark:hover:bg-slate-800 text-slate-600 dark:text-slate-300",
   };
 
   const sizes = {
@@ -33,17 +36,17 @@ export default function Button({
   );
 
   if (href) {
+    const MotionLink = motion(Link);
     return (
-      <Link href={href} passHref legacyBehavior>
-        <motion.a
-          whileHover={{ scale: 1.05 }}
-          whileTap={{ scale: 0.95 }}
-          className={classes}
-          {...props}
-        >
-          {children}
-        </motion.a>
-      </Link>
+      <MotionLink
+        href={href}
+        whileHover={{ scale: 1.05 }}
+        whileTap={{ scale: 0.95 }}
+        className={classes}
+        {...props}
+      >
+        {children}
+      </MotionLink>
     );
   }
 
