@@ -1,5 +1,4 @@
 import { NextResponse } from "next/server";
-import nodemailer from "nodemailer";
 
 export async function POST(request) {
   try {
@@ -13,76 +12,31 @@ export async function POST(request) {
       );
     }
 
-    const emailUser = process.env.EMAIL_USER;
-    const emailPass = process.env.EMAIL_PASS;
-
-    // Check for credentials
-    if (!emailUser || !emailPass) {
-      console.warn("⚠️  Email credentials missing (EMAIL_USER, EMAIL_PASS).");
-
-      // In development, we can mock the success to avoid breaking the UI
-      if (process.env.NODE_ENV !== "production") {
-        console.log("📝 [DEV MODE] Mocking email send:");
-        console.log(`   To: social.tanbir@gmail.com`);
-        console.log(`   From: ${name} <${email}>`);
-        console.log(`   Contact: ${contact}`);
-        console.log(`   Message: ${message}`);
-
-        return NextResponse.json(
-          { message: "Email sent successfully (MOCKED)" },
-          { status: 200 }
-        );
-      }
+    // Submit to Google Sheets
+    try {
+      const GOOGLE_SCRIPT_URL =
+        "https://script.google.com/macros/s/AKfycbx4PTeR3V_QiB4NkmA38U-NsQ4dls-hU0fVHVco3Yq00hjLWXbu29nOdCsjjIE3_-O5pg/exec";
+      await fetch(GOOGLE_SCRIPT_URL, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ name, email, contact, message }),
+      });
 
       return NextResponse.json(
-        { error: "Server configuration error: Missing email credentials" },
+        { message: "Message sent successfully" },
+        { status: 200 }
+      );
+    } catch (error) {
+      console.error("Error submitting to Google Sheets:", error);
+      return NextResponse.json(
+        { error: "Failed to submit form" },
         { status: 500 }
       );
     }
-
-    // Create a transporter
-    const transporter = nodemailer.createTransport({
-      service: "gmail",
-      auth: {
-        user: emailUser,
-        pass: emailPass,
-      },
-    });
-
-    // Email content
-    const mailOptions = {
-      from: emailUser,
-      to: "social.tanbir@gmail.com",
-      subject: `New Contact Form Submission from ${name}`,
-      text: `
-        Name: ${name}
-        Email: ${email}
-        Contact: ${contact}
-        
-        Message:
-        ${message}
-      `,
-      html: `
-        <h3>New Contact Form Submission</h3>
-        <p><strong>Name:</strong> ${name}</p>
-        <p><strong>Email:</strong> ${email}</p>
-        <p><strong>Contact:</strong> ${contact}</p>
-        <p><strong>Message:</strong></p>
-        <p>${message.replace(/\n/g, "<br>")}</p>
-      `,
-    };
-
-    // Send email
-    await transporter.sendMail(mailOptions);
-
-    return NextResponse.json(
-      { message: "Email sent successfully" },
-      { status: 200 }
-    );
   } catch (error) {
-    console.error("Error sending email:", error);
+    console.error("Error in contact form:", error);
     return NextResponse.json(
-      { error: "Failed to send email" },
+      { error: "Internal Server Error" },
       { status: 500 }
     );
   }
