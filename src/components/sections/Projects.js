@@ -31,7 +31,8 @@ export default function Projects() {
           Featured Projects
         </h2>
         <p className="text-lg text-slate-600 dark:text-slate-400 max-w-2xl mx-auto">
-          A selection of projects that showcase my skills and experience in building real-world solutions.
+          A selection of projects that showcase my skills and experience in
+          building real-world solutions.
         </p>
       </motion.div>
 
@@ -59,7 +60,7 @@ export default function Projects() {
                 </div>
               )}
               <div className="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center gap-4 z-10">
-                 <Button size="sm" variant="secondary" href={project.liveUrl}>
+                <Button size="sm" variant="secondary" href={project.liveUrl}>
                   View Live
                 </Button>
               </div>
@@ -82,10 +83,19 @@ export default function Projects() {
                 ))}
               </div>
               <div className="flex gap-4 mt-auto">
-                <Button size="sm" variant="outline" className="flex-1 gap-2" onClick={handleCodeClick}>
+                <Button
+                  size="sm"
+                  variant="outline"
+                  className="flex-1 gap-2"
+                  onClick={handleCodeClick}
+                >
                   <Github size={16} /> Code
                 </Button>
-                <Button size="sm" className="flex-1 gap-2" href={project.liveUrl}>
+                <Button
+                  size="sm"
+                  className="flex-1 gap-2"
+                  href={project.liveUrl}
+                >
                   <ExternalLink size={16} /> Live
                 </Button>
               </div>
@@ -93,7 +103,6 @@ export default function Projects() {
           </motion.div>
         ))}
       </div>
-
 
       <Modal
         isOpen={isModalOpen}
@@ -105,7 +114,8 @@ export default function Projects() {
             <Github size={24} />
           </div>
           <p className="text-slate-600 dark:text-slate-300">
-            Permission not granted. This project repository is private or restricted.
+            Permission not granted. This project repository is private or
+            restricted.
           </p>
           <div className="flex justify-center pt-2">
             <Button
