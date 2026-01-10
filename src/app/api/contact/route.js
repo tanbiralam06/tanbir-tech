@@ -14,8 +14,7 @@ export async function POST(request) {
 
     // Submit to Google Sheets
     try {
-      const GOOGLE_SCRIPT_URL =
-        "https://script.google.com/macros/s/AKfycbx4PTeR3V_QiB4NkmA38U-NsQ4dls-hU0fVHVco3Yq00hjLWXbu29nOdCsjjIE3_-O5pg/exec";
+      const GOOGLE_SCRIPT_URL = process.env.GOOGLE_SCRIPT_URL;
       await fetch(GOOGLE_SCRIPT_URL, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
