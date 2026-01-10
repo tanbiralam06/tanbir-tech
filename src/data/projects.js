@@ -30,10 +30,10 @@ export const projects = [
     title: "Authentication System",
     description:
       "Secure user authentication system supporting OAuth, JWT, and multi-factor authentication.",
-    tech: ["Node.js", "Express", "Passport.js"],
+    tech: ["Node.js", "Express", "Passport.js", "JWT"],
     liveUrl: "#",
     githubUrl: "#",
-    image: "/projects/auth.png",
+    image: "/projects/auth.webp",
   },
   {
     title: "Nidhi Banking System",
