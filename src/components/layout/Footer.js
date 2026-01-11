@@ -1,5 +1,7 @@
 import Link from "next/link";
-import { Github, Linkedin, Twitter, Mail } from "lucide-react";
+import { Mail } from "lucide-react";
+import { FaXTwitter, FaLinkedin, FaGithub } from "react-icons/fa6";
+
 import Container from "@/components/ui/Container";
 
 export default function Footer() {
@@ -24,7 +26,7 @@ export default function Footer() {
               className="text-slate-500 hover:text-primary transition-colors"
               aria-label="GitHub"
             >
-              <Github size={24} />
+              <FaGithub size={24} />
             </a>
             <a
               href="https://www.linkedin.com/in/tanbir06/"
@@ -33,7 +35,7 @@ export default function Footer() {
               className="text-slate-500 hover:text-primary transition-colors"
               aria-label="LinkedIn"
             >
-              <Linkedin size={24} />
+              <FaLinkedin size={24} />
             </a>
             <a
               href="https://x.com/Tanbir_tech"
@@ -42,7 +44,7 @@ export default function Footer() {
               className="text-slate-500 hover:text-primary transition-colors"
               aria-label="Twitter"
             >
-              <Twitter size={24} />
+              <FaXTwitter size={24} />
             </a>
             <a
               href="mailto:social.tanbir@gmail.com"
