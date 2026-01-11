@@ -1,5 +1,21 @@
 export const experience = [
   {
+    company: "Bengal Gallery",
+    role: "Digital Marketing Executive",
+    period: "May 2022 - October 2022",
+    description:
+      "Managed and handled all social media marketing and Search Engine Optimization for the company and their clients.",
+    technologies: [
+      "SEO",
+      "SMM",
+      "Graphic Design",
+      "Google Ads",
+      "Facebook Ads",
+      "Instagram Ads",
+      "Wordpress",
+    ],
+  },
+  {
     company: "Imagineairy Photographics Pvt Ltd",
     role: "Software Developer",
     period: "February 2024 - June 2025",
