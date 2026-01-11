@@ -5,7 +5,8 @@ import { useState } from "react";
 import { motion } from "framer-motion";
 import Section from "@/components/ui/Section";
 import Button from "@/components/ui/Button";
-import { Mail, Github, Linkedin, Twitter } from "lucide-react";
+import { Mail, Github } from "lucide-react";
+import { FaXTwitter, FaLinkedin } from "react-icons/fa6";
 
 export default function Contact() {
   const [formData, setFormData] = useState({
@@ -104,13 +105,13 @@ export default function Contact() {
                   href="https://www.linkedin.com/in/tanbir06/"
                   className="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center hover:bg-white hover:text-slate-900 transition-all duration-300"
                 >
-                  <Linkedin size={18} />
+                  <FaLinkedin size={18} />
                 </a>
                 <a
                   href="https://x.com/Tanbir_tech"
                   className="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center hover:bg-white hover:text-slate-900 transition-all duration-300"
                 >
-                  <Twitter size={18} />
+                  <FaXTwitter size={18} />
                 </a>
               </div>
             </div>
