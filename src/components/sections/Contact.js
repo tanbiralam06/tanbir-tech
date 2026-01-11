@@ -137,7 +137,7 @@ export default function Contact() {
                     onChange={handleChange}
                     required
                     className="w-full px-4 py-3 rounded-xl bg-slate-50 dark:bg-slate-900/50 border border-slate-200 dark:border-slate-700 focus:outline-none focus:ring-2 focus:ring-primary/50 transition-all text-sm"
-                    placeholder="John Doe"
+                    placeholder="Enter your name"
                   />
                 </div>
                 <div className="space-y-2">
@@ -156,7 +156,7 @@ export default function Contact() {
                     pattern="[0-9]{10}"
                     title="Please enter a valid 10-digit mobile number"
                     className="w-full px-4 py-3 rounded-xl bg-slate-50 dark:bg-slate-900/50 border border-slate-200 dark:border-slate-700 focus:outline-none focus:ring-2 focus:ring-primary/50 transition-all text-sm"
-                    placeholder="9876543210"
+                    placeholder="Enter your contact number"
                   />
                 </div>
               </div>
@@ -175,7 +175,7 @@ export default function Contact() {
                   onChange={handleChange}
                   required
                   className="w-full px-4 py-3 rounded-xl bg-slate-50 dark:bg-slate-900/50 border border-slate-200 dark:border-slate-700 focus:outline-none focus:ring-2 focus:ring-primary/50 transition-all text-sm"
-                  placeholder="john@example.com"
+                  placeholder="Enter your email"
                 />
               </div>
 

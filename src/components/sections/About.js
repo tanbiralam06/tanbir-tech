@@ -19,7 +19,7 @@ export default function About() {
           <div className="relative aspect-square max-w-md mx-auto md:mx-0 bg-slate-200 dark:bg-slate-800 rounded-full overflow-hidden group">
             <div className="relative w-full h-full">
               <Image
-                src="/projects/tanbir.png"
+                src="/projects/tanbir.webp"
                 alt="Tanbir's Profile"
                 fill
                 className="object-cover transition-transform duration-500 group-hover:scale-110 drop-shadow-2xl"
@@ -41,7 +41,7 @@ export default function About() {
           >
             About Me
           </motion.h2>
-          
+
           <motion.p
             initial={{ opacity: 0, x: 20 }}
             whileInView={{ opacity: 1, x: 0 }}
@@ -49,11 +49,11 @@ export default function About() {
             transition={{ duration: 0.5, delay: 0.1 }}
             className="text-lg text-slate-600 dark:text-slate-400 leading-relaxed"
           >
-            I started my journey in Philosophy but found my true passion in coding.
-            Now, as a Full Stack Developer, I combine critical thinking with technical expertise
-            to build robust solutions.
+            I started my journey in Philosophy but found my true passion in
+            coding. Now, as a Full Stack Developer, I combine critical thinking
+            with technical expertise to build robust solutions.
           </motion.p>
-          
+
           <motion.p
             initial={{ opacity: 0, x: 20 }}
             whileInView={{ opacity: 1, x: 0 }}
@@ -61,10 +61,11 @@ export default function About() {
             transition={{ duration: 0.5, delay: 0.2 }}
             className="text-lg text-slate-600 dark:text-slate-400 leading-relaxed"
           >
-            I love learning new technologies and solving complex problems.
-            My goal is to create impactful digital experiences that help businesses grow.
+            I love learning new technologies and solving complex problems. My
+            goal is to create impactful digital experiences that help businesses
+            grow.
           </motion.p>
-          
+
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}

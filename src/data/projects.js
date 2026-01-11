@@ -6,7 +6,7 @@ export const projects = [
     tech: ["React", "WebAssembly", "TailwindCSS"],
     liveUrl: "https://imagitor-delta.vercel.app/",
     githubUrl: "#",
-    image: "/projects/imagitor.png",
+    image: "/projects/imagitor.webp",
   },
   {
     title: "ReacUI - Component Library",
@@ -15,7 +15,7 @@ export const projects = [
     tech: ["React", "TypeScript", "Storybook"],
     liveUrl: "https://reacui.vercel.app/",
     githubUrl: "#",
-    image: "/projects/reacui.png",
+    image: "/projects/reacui.webp",
   },
   {
     title: "Kinder School",
