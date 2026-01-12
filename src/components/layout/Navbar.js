@@ -13,7 +13,7 @@ const navLinks = [
   { name: "Skills", href: "#skills" },
   { name: "Projects", href: "#projects" },
   { name: "Experience", href: "#experience" },
-  { name: "Contact", href: "#contact" },
+  // { name: "Contact", href: "#contact" },
 ];
 
 export default function Navbar() {
@@ -58,7 +58,7 @@ export default function Navbar() {
               </Link>
             ))}
             <Button size="sm" variant="primary" href="#contact">
-              Hire Me
+              Book a Call
             </Button>
           </div>
 
