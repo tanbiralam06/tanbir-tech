@@ -1,48 +1,26 @@
 export const skills = [
-  {
-    category: "Frontend",
-    icon: "Layout",
-    items: [
-      { name: "HTML", icon: "FileCode" },
-      { name: "CSS", icon: "Palette" },
-      { name: "JavaScript", icon: "FileJson" },
-      { name: "React", icon: "Atom" },
-      { name: "Next.js", icon: "Zap" },
-      { name: "TailwindCSS", icon: "Wind" },
-    ],
-  },
-  {
-    category: "Backend",
-    icon: "Server",
-    items: [
-      { name: "Node.js", icon: "Hexagon" },
-      { name: "Express.js", icon: "Activity" },
-    ],
-  },
-  {
-    category: "Database",
-    icon: "Database",
-    items: [
-      { name: "MongoDB", icon: "Database" },
-      { name: "PostgreSQL", icon: "Layers" },
-    ],
-  },
-  {
-    category: "Cloud & DevOps",
-    icon: "Cloud",
-    items: [
-      { name: "AWS", icon: "Cloud" },
-      { name: "GCP", icon: "Globe" },
-      { name: "Docker", icon: "Package" },
-    ],
-  },
-  {
-    category: "Tools",
-    icon: "Wrench",
-    items: [
-      { name: "Git", icon: "GitBranch" },
-      { name: "VS Code", icon: "AppWindow" },
-      { name: "Postman", icon: "Orbit" },
-    ],
-  },
+  { name: "Javascript", icon: "SiJavascript", color: "#F7DF1E" },
+  { name: "Python", icon: "SiPython", color: "#3776AB" },
+  { name: "Typescript", icon: "SiTypescript", color: "#3178C6" },
+  { name: "HTML", icon: "SiHtml5", color: "#E34F26" },
+  { name: "Material UI", icon: "SiMui", color: "#007FFF" },
+  { name: "Next.js", icon: "SiNextdotjs", color: "#000000" },
+  { name: "n8n", icon: "SiN8N", color: "#EA4B71" }, // Note: check if SiN8n exists, otherwise fallback
+  { name: "React", icon: "SiReact", color: "#61DAFB" },
+  { name: "TailwindCSS", icon: "SiTailwindcss", color: "#06B6D4" },
+  { name: "Express.js", icon: "SiExpress", color: "#000000" },
+  { name: "Firebase", icon: "SiFirebase", color: "#FFCA28" },
+  { name: "GraphQL", icon: "SiGraphql", color: "#E10098" },
+  { name: "Hugging Face", icon: "SiHuggingface", color: "#FFD21E" },
+  { name: "MongoDB", icon: "SiMongodb", color: "#47A248" },
+  { name: "MySQL", icon: "SiMysql", color: "#4479A1" },
+  { name: "Node.js", icon: "SiNodedotjs", color: "#339933" },
+  { name: "PostgreSQL", icon: "SiPostgresql", color: "#4169E1" },
+  { name: "Prisma", icon: "SiPrisma", color: "#2D3748" },
+  { name: "Supabase", icon: "SiSupabase", color: "#3ECF8E" },
+  { name: "Docker", icon: "SiDocker", color: "#2496ED" },
+  { name: "Git", icon: "SiGit", color: "#F05032" },
+  { name: "NPM", icon: "SiNpm", color: "#CB3837" },
+  { name: "Vercel", icon: "SiVercel", color: "#000000" },
+  { name: "Figma", icon: "SiFigma", color: "#F24E1E" },
 ];
