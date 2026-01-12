@@ -32,14 +32,17 @@ export default function Navbar() {
     <nav
       className={cn(
         "fixed top-0 left-0 right-0 z-50 transition-all duration-300",
-        scrolled
-          ? "bg-background/80 backdrop-blur-md border-b border-slate-200 dark:border-slate-800 py-2"
-          : "bg-transparent py-4"
+        scrolled || isOpen
+          ? "translate-y-0 bg-background/80 backdrop-blur-md border-b border-slate-200 dark:border-slate-800 py-2"
+          : "-translate-y-full py-4 pointer-events-none opacity-0"
       )}
     >
       <Container>
         <div className="flex items-center justify-between">
-          <Link href="/" className="text-2xl font-bold text-primary tracking-tight">
+          <Link
+            href="/"
+            className="text-2xl font-bold text-primary tracking-tight"
+          >
             Tanbir<span className="text-foreground">Alam</span>
           </Link>
 
@@ -90,7 +93,12 @@ export default function Navbar() {
                   {link.name}
                 </Link>
               ))}
-              <Button size="md" className="w-full" href="#contact" onClick={() => setIsOpen(false)}>
+              <Button
+                size="md"
+                className="w-full"
+                href="#contact"
+                onClick={() => setIsOpen(false)}
+              >
                 Hire Me
               </Button>
             </Container>
